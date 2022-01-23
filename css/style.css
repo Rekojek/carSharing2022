@@ -12,7 +12,6 @@
 header {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    height: 88px;
     text-transform: uppercase;
     align-items: center;
     position: absolute;
@@ -43,7 +42,7 @@ nav ul li {
 }
 
 li:hover {
-    color: red;
+    background-color: rgba(120,120,120, 0.3);
 }
 
 .hero {
@@ -120,4 +119,145 @@ li:hover {
     justify-content: center;
     align-items: center;
     top: calc(100vh - 55px/2);
+}
+
+.hero__text {
+    text-align: center;
+}
+
+.service {
+    display: flex;
+}
+
+.blog {
+    background: #28272c;
+    display: flex;
+}
+
+.contact {
+    height: 200px;
+    display: flex;
+}
+
+.wrapper {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+
+.heading {
+    position: relative;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.heading::after,
+.heading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    height: 3px;
+    width: 30px;
+    background: red;
+}
+
+.heading::after {
+    left: -35px;
+}
+
+.heading::before {
+    right: -35px;
+}
+
+.service__container,
+.blog__container,
+.contact__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.service__header {
+    text-align: left;
+    padding: 10px 0;
+}
+.service__text {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.box button {
+    background: red;
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    border: none;
+}
+
+.blog__header,
+.blog__text {
+    text-align: left;
+    padding: 10px;
+    color: white;
+}
+
+.heading__blog {
+    color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border: 1px solid red;
+}
+
+.customCheckboxWrapper {
+    display: flex;
+}
+
+.customCheckboxWrapper input {
+    width: 0;
+    height: 0;
+    display: none;
+    padding: 5px;
+}
+
+.customCheckboxWrapper span {
+    width: 20px;
+    height: 20px;
+    background: blue;
+    display: block;
+    flex-shrink: 0;
+    margin: 3px;
+    border-radius: 3px;
+}
+
+.customCheckboxWrapper input:checked + span {
+    background: lightgreen;
 }
